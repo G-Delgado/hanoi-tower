@@ -32,7 +32,6 @@ public class Main {
 				line = br.readLine();
 				if (line != null) {
 					String result = ppal.solveHanoiStart(line);
-					//System.out.println(result);
 					ppal.pw.println(result + "\n");
 				}
 				i++;
@@ -46,13 +45,11 @@ public class Main {
 	
 	public String solveHanoiStart(String discs) {
 		int n = Integer.parseInt(discs);
-		//pw.println(discs + " 0 " + "0");
-		String result = discs + " 0 " + "0\n";
+		pw.println(discs + " 0 " + "0");
 		while (firstRod.size() < n) {
 			firstRod.add(firstRod.size() + 1);
 		}
-		result += solveHanoi(n, firstRod, midRod, endRod);
-		//System.out.println(result + "\nSAPE!");
+		String result = solveHanoi(n, firstRod, midRod, endRod);
 		firstRod.clear();
 		midRod.clear();
 		endRod.clear();
@@ -66,14 +63,12 @@ public class Main {
 		if (n == 1) {
 			third.add(first.pop());
 			// Se cambian los nombres del print, puesto que de lo contrario, el orden estaría intercambiado.
-			//pw.println(firstRod.size() + " " + midRod.size() + " " + endRod.size());
-			result += firstRod.size() + " " + midRod.size() + " " + endRod.size()+ "\n";
+			pw.println(firstRod.size() + " " + midRod.size() + " " + endRod.size());
 			
 		} else {
 			solveHanoi(n - 1, first, third, second);
 			third.add(first.pop());
-			//pw.println(firstRod.size() + " " + midRod.size() + " " + endRod.size());
-			result += firstRod.size() + " " + midRod.size() + " " + endRod.size()+ "\n";
+			pw.println(firstRod.size() + " " + midRod.size() + " " + endRod.size());
 			solveHanoi(n - 1, second, first, third);
 		}
 		return result;
