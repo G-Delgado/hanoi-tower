@@ -46,7 +46,8 @@ That would be the initial representation of the Tower of Hanoi. Then, for each t
 1 0 2
 0 0 3
 ```
-Note that for n discs the amount of representations of the towers are 2^n.
+Note that for n discs the amount of representations of the towers are 2^n.  
+Also, note that the result is printed in the file ./data/result.txt
 ### Technologies
 This program is created with:
 * Java programming language.
@@ -69,5 +70,5 @@ Note that the second command is to run the program
 
 ## Credits
 This program was made by:
-**Gabriel Delgado** // 2021-1 // Universidad Icesi // Ingeniería de Sistemas // Segundo Semestre
+**Gabriel Delgado** // 2021-1 // Universidad Icesi // IngenierÃ­a de Sistemas // Segundo Semestre
 Sape, eh?
